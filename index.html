@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Feliz Cumpleaños, Mi Amor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<main class="wrap">
+  <header>
+    <h1>Feliz cumpleaños, mi amor</h1>
+    <p class="lede">Del 13 al 16 de noviembre esos días son míos. Es una sorpresa: tú solo tienes un trabajo, manejar. De lo demás me encargo yo.</p>
+  </header>
+
+  <div class="ticketwrap">
+    <article class="ticket" id="ticket" aria-label="Pase de sorpresa">
+      <div class="ticket-top">
+        <div class="ticket-head">
+          <strong>Pase de sorpresa</strong>
+          <span>Solo para ti</span>
+        </div>
+
+        <div class="route">
+          <div class="stop"><b>Vie 13</b><small>Salimos en noviembre</small></div>
+          <div class="road" aria-hidden="true">
+            <svg viewBox="0 0 44 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9" cy="19" r="4.6" fill="var(--paper)" stroke="var(--paper-ink)" stroke-width="2"/>
+              <circle cx="35" cy="19" r="4.6" fill="var(--paper)" stroke="var(--paper-ink)" stroke-width="2"/>
+              <path d="M9 19L16 11.5H25L35 19" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14 9h8" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+              <path d="M35 19L31 7h4" stroke="var(--paper-ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="stop end"><b>Lun 16</b><small>Volvemos</small></div>
+        </div>
+
+        <dl class="facts">
+          
+          <div><dt>Conductor</dt><dd>Tú, el cumpleañero</dd></div>
+          <div><dt>Guía</dt><dd>Yo</dd></div>
+          <div class="wide"><dt>Equipaje</dt><dd>Ropa cómoda, abrigo y pantaloneta de baño</dd></div>
+        </dl>
+
+        <div class="dest">
+          <p class="lbl">Destino</p>
+          <div class="scratch" id="scratch">
+            <div class="reveal"><span>Guarne, Antioquia<small>Solos tú y yo</small></span></div>
+            <canvas id="foil" aria-hidden="true"></canvas>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="ticket-stub" id="stub">
+        <p id="countLabel">Faltan para salir</p>
+        <div class="count" id="count" role="timer" aria-live="off">
+          <div><b id="cd-d">00</b><span>días</span></div>
+          <div><b id="cd-h">00</b><span>horas</span></div>
+          <div><b id="cd-m">00</b><span>min</span></div>
+          <div><b id="cd-s">00</b><span>seg</span></div>
+        </div>
+        <p class="count-done" id="countDone" hidden>Hoy salimos.</p>
+        <div class="stamp" aria-hidden="true">Aceptado</div>
+      </div>
+
+    </article>
+  </div>
+
+  <section class="rules">
+    <h2>Reglas del viaje</h2>
+    <ul>
+      <li>Tú manejas, yo te paso la ubicación.</li>
+      <li>Prohibido preguntar qué vamos a hacer.</li>
+      <li>El celular es para fotos y música.</li>
+      <li>Todo lo demás es sorpresa.</li>
+    </ul>
+  </section>
+
+  <section class="answer">
+    <p class="q">¿Te vienes conmigo?</p>
+    <div class="actions">
+      <button type="button" class="btn btn-yes" id="yes">Sí, soy tuyo</button>
+      <button type="button" class="btn btn-maybe" id="maybe" aria-disabled="true">Tal vez</button>
+    </div>
+    <p class="reply" id="reply" aria-live="polite"></p>
+  </section>
+
+  <p class="script sign">Con todo mi amor, tu chica</p>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
